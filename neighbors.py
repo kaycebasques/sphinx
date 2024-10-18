@@ -35,13 +35,16 @@ def k_nearest_neighbors(target, embeddings, k=5):
 with open('doc/embeddings.json', 'r') as f:
     data = json.load(f)
 embeddings = [data[docname]['embedding'] for docname in data]
+print('.. csv-table::')
+print('   :header: "Target", "Neighbor"')
+print()
 for target in embeddings:
     dot_products = np.dot(embeddings, target)
     neighbors = k_nearest_neighbors(target, embeddings, k=3)
     # ignore neighbors[0] because that is always the target itself
     nearest_neighbor = neighbors[1]
     target_docname = find_docname(data, target)
-    target_url = f'https://www.sphinx-doc.org/en/master/{target_docname}.html'
+    target_cell = f'`{target_docname} <https://www.sphinx-doc.org/en/master/{target_docname}.html>`_'
     neighbor_docname = find_docname(data, nearest_neighbor)
-    neighbor_url = f'https://www.sphinx-doc.org/en/master/{neighbor_docname}.html'
-    print(target_url, '->', neighbor_url)
+    neighbor_cell = f'{neighbor_docname} <https://www.sphinx-doc.org/en/master/{neighbor_docname}.html>`_'
+    print(f'   "{target_cell}", "{neighbor_cell}"')
