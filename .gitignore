@@ -36,3 +36,5 @@ tests/test-server.lock
 utils/regression_test.js
 
 node_modules/
+
+*_API_KEY

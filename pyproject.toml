@@ -72,6 +72,9 @@ dependencies = [
     "requests>=2.30.0",
     "packaging>=23.0",
     "colorama>=0.4.6; sys_platform == 'win32'",
+    "sphinx-embeddings==0.0.7",
+    "numpy==2.1.2",
+    "scikit-learn==1.5.2"
 ]
 dynamic = ["version"]
 

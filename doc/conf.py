@@ -20,6 +20,7 @@ extensions = [
     'sphinx.ext.inheritance_diagram',
     'sphinx.ext.coverage',
     'sphinx.ext.graphviz',
+    'sphinx-embeddings',
 ]
 coverage_statistics_to_report = coverage_statistics_to_stdout = True
 templates_path = ['_templates']
