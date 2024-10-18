@@ -41,5 +41,7 @@ for target in embeddings:
     # ignore neighbors[0] because that is always the target itself
     nearest_neighbor = neighbors[1]
     target_docname = find_docname(data, target)
+    target_url = f'https://www.sphinx-doc.org/en/master/{target_docname}.html'
     neighbor_docname = find_docname(data, nearest_neighbor)
-    print(target_docname, neighbor_docname)
+    neighbor_url = f'https://www.sphinx-doc.org/en/master/{neighbor_docname}.html'
+    print(target_url, '->', neighbor_url)
