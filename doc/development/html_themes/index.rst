@@ -37,6 +37,8 @@ theme name), containing the following:
 * A ``static/`` directory containing any static files that will be copied to the
   output static directory on build.  These can be images, styles, script files.
 
+.. _extension-html-theme-configuration:
+
 Theme configuration (``theme.toml``)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
